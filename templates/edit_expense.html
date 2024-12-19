@@ -1,0 +1,21 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Список Расходов{% endblock %}
+
+{% block content %}
+<h2>Редактирование расхода</h2>
+<form method="POST">
+    <label for="amount">Сумма:</label>
+    <input type="text" name="amount" value="{{ expense.amount }}" required>
+    
+    <label for="category">Категория:</label>
+    <input type="text" name="category" value="{{ expense.category }}" required>
+
+    <label for="description">Описание:</label>
+    <input type="text" name="description" value="{{ expense.description }}" required>
+
+    <button type="submit">Сохранить изменения</button>
+</form>
+
+{% endblock %}
